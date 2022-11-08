@@ -1,0 +1,22 @@
+{
+  "name": "marvel-apps",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "start:fe:reactjs": "yarn workspace @marvel-apps/fe-reactjs start",
+    "clean": "rimraf ./**/node_modules",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "concurrently": "^7.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.2",
+    "rimraf": "^3.0.2"
+  }
+}
