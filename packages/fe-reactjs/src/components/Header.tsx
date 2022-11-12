@@ -1,4 +1,6 @@
+import clsx from "clsx";
 import Bars3Icon from "@heroicons/react/24/solid/Bars3Icon";
+import { Link } from "react-router-dom";
 import { RCProps } from "../types";
 
 import { routes } from "../routes";
@@ -9,9 +11,9 @@ type Props = RCProps<
   }>
 >;
 
-export const Header = ({ onOpenSidebar }: Props) => {
+export const Header = ({ onOpenSidebar, className }: Props) => {
   return (
-    <header className="bg-red-700 fixed h-20 w-full z-10">
+    <header className={clsx("bg-red-700 fixed w-full z-10", className)}>
       <div className="px-8 flex h-full items-center xl:container xl:mx-auto">
         <h1 className="text-white uppercase font-bold">
           <a href={routes.home}>Marvel App</a>
@@ -20,20 +22,36 @@ export const Header = ({ onOpenSidebar }: Props) => {
           <Bars3Icon className="text-white h-8 w-8 lg:hidden" />
         </button>
         <nav className="hidden text-white ml-auto lg:flex list-none">
-          <a
-            href={routes.characters}
+          <Link
+            to={routes.characters}
             className="text-sm  uppercase rounded-md inline-flex items-center py-4 px-8"
           >
             Characters
-          </a>
-          <a
-            href={routes.comics}
+          </Link>
+          <Link
+            to={routes.comics}
             className={
               "text-sm  uppercase rounded-md inline-flex items-center py-4 px-8"
             }
           >
             Comics
-          </a>
+          </Link>
+          <Link
+            to={routes.signin}
+            className={
+              "text-sm  uppercase rounded-md inline-flex items-center py-4 px-8"
+            }
+          >
+            Sign In
+          </Link>
+          <Link
+            to={routes.signup}
+            className={
+              "text-sm  uppercase rounded-md inline-flex items-center py-4 px-8"
+            }
+          >
+            Sign Up
+          </Link>
         </nav>
       </div>
     </header>

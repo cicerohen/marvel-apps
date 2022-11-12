@@ -38,7 +38,7 @@ export const Sidebar = ({ isOpen = false, onClose }: Props) => {
   return (
     <aside
       className={clsx(
-        "bg-gray-800 fixed right-0  transition duration-200 ease-in-out w-64 top-0 z-20  bottom-0",
+        "bg-gray-800 fixed right-0 transition duration-200 ease-in-out w-64 top-0 z-20 bottom-0",
         (isOpen && "translate-x-0 lg:translate-x-full") || "translate-x-full"
       )}
     >
