@@ -7,7 +7,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> &
 export const Field = ({ label, errorMessage, ...rest }: Props) => {
   return (
     <div className="flex flex-col space-y-2">
-      <label>Email</label>
+      <label>{label}</label>
       <input
         type="text"
         name="email"

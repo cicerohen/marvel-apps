@@ -1,5 +1,12 @@
-import { View } from "../../components/View";
+import { SignUpView } from "../../components/SignUpView";
+import { useSignUpForm } from "../../components/SignUpForm/useSignUpForm";
 
 export const SignUpViewContainer = () => {
-  return <View>SignUp</View>;
+  const form = useSignUpForm({
+    onSubmit: (values) => {
+      console.log("sign in form values", values);
+    },
+  });
+
+  return <SignUpView formProps={form} />;
 };
