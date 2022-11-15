@@ -1,0 +1,8 @@
+{
+  "exec": "ts-node src/index.ts",
+  "ext": "ts",
+  "watch": ["src"],
+  "events": {
+    "start": "yarn format"
+  }
+}

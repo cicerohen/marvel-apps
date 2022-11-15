@@ -1,6 +1,39 @@
 {
   "name": "@marvel-apps/server",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "exports": "./index.js",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "start": "nodemon",
+    "start:prod": "yarn build && node ./dist/index.js",
+    "build": "tsc",
+    "format": "eslint . --fix && prettier --write"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "@types/dotenv": "^8.2.0",
+    "@types/http-errors": "^2.0.1",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/parser": "^5.43.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.27.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "dynamoose": "^3.1.0",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nanoid": "^4.0.0"
+  }
 }

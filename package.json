@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start:fe:reactjs": "yarn workspace @marvel-apps/fe-reactjs start",
+    "start:server": "yarn workspace @marvel-apps/server start",
     "clean": "rimraf ./**/node_modules",
     "prepare": "husky install"
   },
