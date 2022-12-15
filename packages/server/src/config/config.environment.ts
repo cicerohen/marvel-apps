@@ -5,5 +5,5 @@ export const environment = Object.freeze({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: process.env.AWS_REGION || 'us-east-1'
   },
-  secret: process.env.SECRET || ''
+  secret: process.env.SECRET || 'secret'
 });
